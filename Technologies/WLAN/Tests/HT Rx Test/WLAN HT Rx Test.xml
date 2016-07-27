@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestStepManifest>
+  <TestStepHeader>
+    <Name>802.11n HT Rx Test</Name>
+    <Version>0.2</Version>
+    <GUID>35008B3A-48F5-48F4-864A-7935040BDB53</GUID>
+    <Technology>WLAN</Technology>
+	<Documentation></Documentation>
+  </TestStepHeader>
+  <TestStepSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niDTS WLAN HT Rx Test Initialize.vi" />
+    <Configure type="VI" URL="..\Exports\niDTS WLAN HT Rx Test Configure.vi" />
+    <Initiate type="VI" URL="..\Exports\niDTS WLAN HT Rx Test Initiate.vi" />
+    <FetchResults type="VI" URL="..\Exports\niDTS WLAN HT Rx Test Fetch Results.vi" />
+    <Close type="VI" URL="..\Exports\niDTS WLAN HT Rx Test Close.vi" />
+    <SetParameters type="VI" URL="..\Exports\niDTS WLAN HT Rx Test Set Parameters.vi" />
+    <GetDefaultParameters type="VI" URL="..\Exports\niDTS WLAN HT Rx Test Get Default Parameters.vi" />
+    <GetDefaultLimits type="VI" URL="..\Exports\niDTS WLAN HT Rx Test Get Default Limits.vi" />
+  </TestStepSoftwareInterface>
+</TestStepManifest>

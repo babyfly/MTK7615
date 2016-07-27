@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestStepManifest>
+  <TestStepHeader>
+    <Name>Cal Execute</Name>
+    <Version>1.0</Version>
+    <GUID>D5AF878F-FA92-47AD-903D-0A6773528416</GUID>
+    <Technology>Utilities</Technology>
+    <SupportedDuts></SupportedDuts>
+    <Documentation></Documentation>
+  </TestStepHeader>
+  <TestStepSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niDTS Calibration Cal Execute RF Test Initialize.vi" />
+    <Configure type="VI" URL="..\Exports\niDTS Calibration Cal Execute RF Test Configure.vi" />
+    <Initiate type="VI" URL="..\Exports\niDTS Calibration Cal Execute RF Test Initiate.vi" />
+    <FetchResults type="VI" URL="..\Exports\niDTS Calibration Cal Execute RF Test Fetch Results.vi" />
+    <Close type="VI" URL="..\Exports\niDTS Calibration Cal Execute RF Test Close.vi" />
+    <SetParameters type="VI" URL="..\Exports\niDTS Calibration Cal Execute RF Test Set Parameters.vi" />
+    <GetDefaultParameters type="VI" URL="..\Exports\niDTS Calibration Cal Execute RF Test Get Default Parameters.vi" />
+    <GetDefaultLimits type="VI" URL="..\Exports\niDTS Calibration Cal Execute RF Test Get Default Limits.vi" />
+  </TestStepSoftwareInterface>
+</TestStepManifest>

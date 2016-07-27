@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DutManifest>
+  <DutPlugin>
+    <Name>niBCM4356</Name>
+    <Version>1.0</Version>
+    <GUID>30A1FBA2-28CA-4CDB-8D66-67BC5B25BF78</GUID>
+    <ChipsetVendor>Broadcom</ChipsetVendor>
+    <ChipsetModel>4356</ChipsetModel>
+    <OEM></OEM>
+    <OEMModel></OEMModel>
+    <Documentation></Documentation>
+  </DutPlugin>
+  <Technologies>
+    <Technology name="WLAN">
+      <Interfaces />
+    </Technology>
+  </Technologies>
+  <DutAntennas>
+    <DutAntenna>
+      <AntennaTechnology>WLAN</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="" instrPort="" />
+        <RxConnection instrName="" instrPort="" />
+      </InstrumentConnections>
+    </DutAntenna>
+    <DutAntenna>
+      <AntennaTechnology>WLAN</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="" instrPort="" />
+        <RxConnection instrName="" instrPort="" />
+      </InstrumentConnections>
+    </DutAntenna>
+  </DutAntennas>
+  <DutSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niBCM4356 Initialize Telnet.vi" />
+  </DutSoftwareInterface>
+</DutManifest>

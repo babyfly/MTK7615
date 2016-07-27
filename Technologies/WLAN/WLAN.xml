@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TechnologyManifest>
+  <TechnologyHeader>
+    <Name>WLAN</Name>
+    <Version>1.0</Version>
+    <GUID>0278E884-7D5E-44A9-9615-B4CF450570BF</GUID>
+    <Vendor>NI</Vendor>
+    <Documentation>Wireless LAN, generated Feb 16th, 2016</Documentation>
+  </TechnologyHeader>
+      <Standards>
+        <Standard name="DSSS" />
+        <Standard name="OFDM" />
+        <Standard name="HT" />
+        <Standard name="VHT" />
+      </Standards>
+</TechnologyManifest>

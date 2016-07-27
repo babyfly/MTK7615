@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemConfiguration>
+  <Duts>
+    <DutManifest>
+      <DutPlugin>
+        <Name>BTDUT</Name>
+        <Version>1.0</Version>
+        <GUID>445B85B4-AEA8-4122-9430-F33240942B0C</GUID>
+        <ChipsetVendor></ChipsetVendor>
+        <ChipsetModel></ChipsetModel>
+        <OEM></OEM>
+        <OEMModel></OEMModel>
+        <Documentation></Documentation>
+      </DutPlugin>
+      <Technologies>
+        <Technology name="Bluetooth">
+          <Interfaces>
+            <InterfaceSocket DisplayName="Bluetooth" ConversionType="Container" PropObjPath="Bluetooth">
+              <WirelessModule.DataDef_Container DisplayName="Serial Resource" ConversionType="Container" PropObjPath="Bluetooth.Serial_Resource">
+                <WirelessModule.DataDef_String DisplayName="DeviceName" ConversionType="NeedsQuotes" PropObjPath="Bluetooth.Serial_Resource.DeviceName" value="COM1" />
+                <WirelessModule.DataDef_Numeric DisplayName="SessionNumber" ConversionType="AsIs" PropObjPath="Bluetooth.Serial_Resource.SessionNumber" value="1491075072" />
+              </WirelessModule.DataDef_Container>
+            </InterfaceSocket>
+          </Interfaces>
+        </Technology>
+      </Technologies>
+      <DutAntennas>
+        <DutAntenna Disabled="0">
+          <AntennaAlias />
+          <AntennaTechnology>Bluetooth</AntennaTechnology>
+          <InstrumentConnectionsSocket number="0">
+            <InstrumentConnections>
+              <TxConnection instrName="10.0.19.103" instrPort="RIO0" />
+              <RxConnection instrName="10.0.19.103" instrPort="RIO0" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+        </DutAntenna>
+      </DutAntennas>
+      <DutSoftwareInterface>
+        <Initialize type="VI" URL="Plugins\niLEDTM BT\Exports\niLEDTM BT Initialize Serial.vi" />
+      </DutSoftwareInterface>
+    </DutManifest>
+  </Duts>
+  <Documentation></Documentation>
+  <Hardware>
+    <InstrumentMappings>
+      <InstrumentMapping InstrumentName="10.0.19.103" CalibrationFile="" ClockReference="Internal" />
+    </InstrumentMappings>
+    <HardwareManifestPath>C:\Users\rfuser\Desktop\hardware manifest_bt.xml</HardwareManifestPath>
+  </Hardware>
+</SystemConfiguration>

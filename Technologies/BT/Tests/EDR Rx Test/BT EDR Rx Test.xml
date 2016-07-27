@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestStepManifest>
+  <TestStepHeader>
+    <Name>BT Rx EDR Test</Name>
+    <Version>1.0</Version>
+    <GUID>FD197C17-39D9-4C96-BE4A-5A42B5AA6C40</GUID>
+    <Technology>Bluetooth</Technology>
+    <SupportedDuts>BTDUT</SupportedDuts>
+    <Documentation></Documentation>
+  </TestStepHeader>
+  <TestStepSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niDTS BT EDR Rx Test  Initialize.vi" />
+    <Configure type="VI" URL="..\Exports\niDTS BT EDR Rx Test Configure.vi" />
+    <Initiate type="VI" URL="..\Exports\niDTS BT EDR Rx Test Initiate.vi" />
+    <FetchResults type="VI" URL="..\Exports\niDTS BT EDR Rx Test Fetch Results.vi" />
+    <Close type="VI" URL="..\Exports\niDTS BT EDR Rx Test Close.vi" />
+    <SetParameters type="VI" URL="..\Exports\niDTS BT EDR Rx Test Set Parameters.vi" />
+    <GetDefaultParameters type="VI" URL="..\Exports\niDTS BT EDR Rx Test Get Default Parameters.vi" />
+    <GetDefaultLimits type="VI" URL="..\Exports\niDTS BT EDR Rx Test Get Default Limits.vi" />
+  </TestStepSoftwareInterface>
+</TestStepManifest>

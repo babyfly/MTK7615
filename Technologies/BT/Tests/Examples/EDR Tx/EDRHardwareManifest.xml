@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HardwareManifest>
+  <Documentation></Documentation>
+  <Hardware>
+    <Connections>
+      <Connection alias="SA0" resource="rivi-inst" type="Analyzer" interface="VISA" />
+      <Connection alias="SG0" resource="rivi-inst" type="Generator" interface="VISA" />
+
+    </Connections>
+    <Ports>
+      <Port alias="port0" name="NAME" direction="Bidirectional" />
+    </Ports>
+  </Hardware>
+
+<Instruments>
+    <SignalAnalyzers>
+      <SignalAnalyzer interface="VISA" name="SA0" resource="Dummy"/>
+      <SignalAnalyzer interface="VISA" name="SA1" resource="Dummy"/>
+    </SignalAnalyzers>
+    <SignalGenerators>
+      <SignalGenerator interface="VISA" name="SG0" resource="Dummy"/>
+      <SignalGenerator interface="VISA" name="SG1" resource="Dummy"/>
+    </SignalGenerators>
+  </Instruments>  
+
+</HardwareManifest>

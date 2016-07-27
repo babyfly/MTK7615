@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemConfiguration xmlns="http://www.ni.com/WTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ni.com/WTS http://www.ni.com/WTS/niWTSSystem.xsd">
+  <HardwareManifest>
+    <Hardware>
+      <Connections>
+        <Connection alias="SA0" type="Analyzer" resource="Dummy" interface="VISA" />
+        <Connection alias="SA1" type="Analyzer" resource="Dummy" interface="VISA" />
+		<Connection alias="SA2" type="Analyzer" resource="Dummy" interface="VISA" />
+        <Connection alias="SA3" type="Analyzer" resource="Dummy" interface="VISA" />
+        <Connection alias="SG0" type="Generator" resource="Dummy" interface="VISA" />
+        <Connection alias="SG1" type="Generator" resource="Dummy" interface="VISA" />
+		<Connection alias="SG2" type="Generator" resource="Dummy" interface="VISA" />
+        <Connection alias="SG3" type="Generator" resource="Dummy" interface="VISA" />
+      </Connections>
+      <Ports>
+        <Port name="SA0" alias="SA0" />
+		<Port name="SA1" alias="SA0" />
+		<Port name="SA2" alias="SA0" />
+		<Port name="SA3" alias="SA0" />
+		<Port name="SG0" alias="SG0" />
+		<Port name="SG1" alias="SG1" />
+		<Port name="SG2" alias="SG2" />
+		<Port name="SG3" alias="SG3" />
+      </Ports>
+    </Hardware> 
+  </HardwareManifest>
+  <Duts>
+    <DutManifest>
+      <DutPlugin>
+        <Name>Dummy DUT</Name>
+        <Version>0.1</Version>
+        <GUID>0F1C9763-4ACC-44BD-9F77-709C397E733B</GUID>
+        <ChipsetVendor>Dummy Vendor</ChipsetVendor>
+        <ChipsetModel>Dummy Model</ChipsetModel>
+      </DutPlugin>
+      <Technologies>
+        <Technology name="Dummy">
+          <Standards>
+            <Standard name="DSSS" />
+            <Standard name="OFDM" />
+            <Standard name="HT" />
+            <Standard name="VHT" />
+          </Standards>
+          <Interfaces>
+            <InterfaceSocket DisplayName="WLAN" ConversionType="Container" PropObjPath="WLAN" SocketIndex="0">
+              <WirelessModule.DataDef_String DisplayName="IP Address" ConversionType="NeedsQuotes" PropObjPath="WLAN.IP_Address" value="1.2.3.4" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array" />
+              <WirelessModule.DataDef_Enum DisplayName="color" ConversionType="AsIs" PropObjPath="WLAN.color" value="4">
+                <ExtraInfo>
+                  <Enumerations>
+                    <Enumeration value="0" name="black" />
+                    <Enumeration value="1" name="white" />
+                    <Enumeration value="2" name="red" />
+                    <Enumeration value="3" name="blue" />
+                    <Enumeration value="4" name="yellow" />
+                    <Enumeration value="5" name="orange" />
+                    <Enumeration value="6" name="purple" />
+                  </Enumerations>
+                </ExtraInfo>
+              </WirelessModule.DataDef_Enum>
+              <WirelessModule.DataDef_Numeric DisplayName="Numeric" ConversionType="AsIs" PropObjPath="WLAN.Numeric" value="0" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array 2" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array_2">
+                <value>1.1</value>
+                <value>2</value>
+              </WirelessModule.DataDef_NumericArray>
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="WLAN" ConversionType="Container" PropObjPath="WLAN" SocketIndex="1">
+              <WirelessModule.DataDef_String DisplayName="IP Address" ConversionType="NeedsQuotes" PropObjPath="WLAN.IP_Address" value="1.2.3.4" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array" />
+              <WirelessModule.DataDef_Enum DisplayName="color" ConversionType="AsIs" PropObjPath="WLAN.color" value="4">
+                <ExtraInfo>
+                  <Enumerations>
+                    <Enumeration value="0" name="black" />
+                    <Enumeration value="1" name="white" />
+                    <Enumeration value="2" name="red" />
+                    <Enumeration value="3" name="blue" />
+                    <Enumeration value="4" name="yellow" />
+                    <Enumeration value="5" name="orange" />
+                    <Enumeration value="6" name="purple" />
+                  </Enumerations>
+                </ExtraInfo>
+              </WirelessModule.DataDef_Enum>
+              <WirelessModule.DataDef_Numeric DisplayName="Numeric" ConversionType="AsIs" PropObjPath="WLAN.Numeric" value="0" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array 2" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array_2">
+                <value>1.1</value>
+                <value>2</value>
+              </WirelessModule.DataDef_NumericArray>
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="WLAN" ConversionType="Container" PropObjPath="WLAN" SocketIndex="2">
+              <WirelessModule.DataDef_String DisplayName="IP Address" ConversionType="NeedsQuotes" PropObjPath="WLAN.IP_Address" value="1.2.3.4" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array" />
+              <WirelessModule.DataDef_Enum DisplayName="color" ConversionType="AsIs" PropObjPath="WLAN.color" value="4">
+                <ExtraInfo>
+                  <Enumerations>
+                    <Enumeration value="0" name="black" />
+                    <Enumeration value="1" name="white" />
+                    <Enumeration value="2" name="red" />
+                    <Enumeration value="3" name="blue" />
+                    <Enumeration value="4" name="yellow" />
+                    <Enumeration value="5" name="orange" />
+                    <Enumeration value="6" name="purple" />
+                  </Enumerations>
+                </ExtraInfo>
+              </WirelessModule.DataDef_Enum>
+              <WirelessModule.DataDef_Numeric DisplayName="Numeric" ConversionType="AsIs" PropObjPath="WLAN.Numeric" value="0" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array 2" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array_2">
+                <value>1.1</value>
+                <value>2</value>
+              </WirelessModule.DataDef_NumericArray>
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="WLAN" ConversionType="Container" PropObjPath="WLAN" SocketIndex="3">
+              <WirelessModule.DataDef_String DisplayName="IP Address" ConversionType="NeedsQuotes" PropObjPath="WLAN.IP_Address" value="1.2.3.4" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array" />
+              <WirelessModule.DataDef_Enum DisplayName="color" ConversionType="AsIs" PropObjPath="WLAN.color" value="4">
+                <ExtraInfo>
+                  <Enumerations>
+                    <Enumeration value="0" name="black" />
+                    <Enumeration value="1" name="white" />
+                    <Enumeration value="2" name="red" />
+                    <Enumeration value="3" name="blue" />
+                    <Enumeration value="4" name="yellow" />
+                    <Enumeration value="5" name="orange" />
+                    <Enumeration value="6" name="purple" />
+                  </Enumerations>
+                </ExtraInfo>
+              </WirelessModule.DataDef_Enum>
+              <WirelessModule.DataDef_Numeric DisplayName="Numeric" ConversionType="AsIs" PropObjPath="WLAN.Numeric" value="0" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array 2" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array_2">
+                <value>1.1</value>
+                <value>2</value>
+              </WirelessModule.DataDef_NumericArray>
+            </InterfaceSocket>
+          </Interfaces>
+        </Technology>
+        <Technology name="Bluetooth">
+          <Interfaces>
+            <InterfaceSocket DisplayName="Bluetooth" ConversionType="Container" PropObjPath="Bluetooth" SocketIndex="0">
+              <WirelessModule.DataDef_String DisplayName="COM Port" ConversionType="NeedsQuotes" PropObjPath="Bluetooth.COM_Port" value="" />
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="Bluetooth" ConversionType="Container" PropObjPath="Bluetooth" SocketIndex="1">
+              <WirelessModule.DataDef_String DisplayName="COM Port" ConversionType="NeedsQuotes" PropObjPath="Bluetooth.COM_Port" value="" />
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="Bluetooth" ConversionType="Container" PropObjPath="Bluetooth" SocketIndex="2">
+              <WirelessModule.DataDef_String DisplayName="COM Port" ConversionType="NeedsQuotes" PropObjPath="Bluetooth.COM_Port" value="" />
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="Bluetooth" ConversionType="Container" PropObjPath="Bluetooth" SocketIndex="3">
+              <WirelessModule.DataDef_String DisplayName="COM Port" ConversionType="NeedsQuotes" PropObjPath="Bluetooth.COM_Port" value="" />
+            </InterfaceSocket>
+          </Interfaces>
+        </Technology>
+      </Technologies>
+      <DutAntennas>
+        <DutAntenna antennaIndex="0">
+          <AntennaAlias>DummyAnt0</AntennaAlias>
+          <AntennaTechnology name="WLAN" />
+          <InstrumentConnectionsSocket number="0"> 
+            <InstrumentConnections>
+              <TxConnection instrName="SA0" instrPort="SA0" />
+			  <TxConnection instrName="SA1" instrPort="SA1" />
+              <RxConnection instrName="SG0" instrPort="SG0" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="1">
+            <InstrumentConnections>
+              <TxConnection instrName="SA1" instrPort="SA1" />
+              <RxConnection instrName="SG1" instrPort="SG1" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="2">
+            <InstrumentConnections>
+              <TxConnection instrName="SA2" instrPort="SA2" />
+              <RxConnection instrName="SG2" instrPort="SG2" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="3">
+            <InstrumentConnections>
+              <TxConnection instrName="SA3" instrPort="SA3" />
+              <RxConnection instrName="SG3" instrPort="SG3" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+        </DutAntenna>
+        <DutAntenna antennaIndex="1">
+          <AntennaAlias>DummyAnt1</AntennaAlias>
+          <AntennaTechnology name="Dummy" />
+          <InstrumentConnectionsSocket number="0">
+            <InstrumentConnections>
+              <TxConnection instrName="SA0" instrPort="SA0" />
+              <RxConnection instrName="SG0" instrPort="SG0" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="1">
+            <InstrumentConnections>
+              <TxConnection instrName="SA1" instrPort="SA1" />
+              <RxConnection instrName="SG1" instrPort="SG1" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="2">
+            <InstrumentConnections>
+              <TxConnection instrName="SA2" instrPort="SA2" />
+              <RxConnection instrName="SG2" instrPort="SG2" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="3">
+            <InstrumentConnections>
+              <TxConnection instrName="SA3" instrPort="SA3" />
+              <RxConnection instrName="SG3" instrPort="SG3" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+        </DutAntenna>
+        <DutAntenna antennaIndex="2">
+          <AntennaAlias>DummyAnt2</AntennaAlias>
+          <AntennaTechnology name="Dummy" />
+		  <AntennaTechnology name="WLAN" />
+          <InstrumentConnectionsSocket number="0">
+            <InstrumentConnections>
+              <TxConnection instrName="SA0" instrPort="SA0" />
+              <RxConnection instrName="SG0" instrPort="SG0" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="1">
+            <InstrumentConnections>
+              <TxConnection instrName="SA1" instrPort="SA1" />
+              <RxConnection instrName="SG1" instrPort="SG1" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="2">
+            <InstrumentConnections>
+              <TxConnection instrName="SA2" instrPort="SA2" />
+              <RxConnection instrName="SG2" instrPort="SG2" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="3">
+            <InstrumentConnections>
+              <TxConnection instrName="SA3" instrPort="SA3" />
+              <RxConnection instrName="SG3" instrPort="SG3" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+        </DutAntenna>
+      </DutAntennas>
+      <DutSoftwareInterface>
+        <Initialize URL="./Dummy DUT Initialize.vi" type="VI" name="Dummy DUT Initialize" />
+      </DutSoftwareInterface>
+    </DutManifest>
+	
+	<DutManifest>
+      <DutPlugin>
+        <Name>GarbageDUT</Name>
+        <Version>0.1</Version>
+        <GUID>0F1C9763-4ACC-FFFF-9F77-709C397E733B</GUID>
+        <ChipsetVendor>GargabeVendor</ChipsetVendor>
+        <ChipsetModel>GarbageModel</ChipsetModel>
+      </DutPlugin>
+      <Technologies>
+        <Technology name="Dummy">
+          <Standards>
+            <Standard name="DSSS" />
+            <Standard name="OFDM" />
+            <Standard name="HT" />
+            <Standard name="VHT" />
+          </Standards>
+          <Interfaces>
+            <InterfaceSocket DisplayName="WLAN" ConversionType="Container" PropObjPath="WLAN" SocketIndex="0">
+              <WirelessModule.DataDef_String DisplayName="IP Address" ConversionType="NeedsQuotes" PropObjPath="WLAN.IP_Address" value="1.2.3.4" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array" />
+              <WirelessModule.DataDef_Enum DisplayName="color" ConversionType="AsIs" PropObjPath="WLAN.color" value="4">
+                <ExtraInfo>
+                  <Enumerations>
+                    <Enumeration value="0" name="black" />
+                    <Enumeration value="1" name="white" />
+                    <Enumeration value="2" name="red" />
+                    <Enumeration value="3" name="blue" />
+                    <Enumeration value="4" name="yellow" />
+                    <Enumeration value="5" name="orange" />
+                    <Enumeration value="6" name="purple" />
+                  </Enumerations>
+                </ExtraInfo>
+              </WirelessModule.DataDef_Enum>
+              <WirelessModule.DataDef_Numeric DisplayName="Numeric" ConversionType="AsIs" PropObjPath="WLAN.Numeric" value="0" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array 2" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array_2">
+                <value>1.1</value>
+                <value>2</value>
+              </WirelessModule.DataDef_NumericArray>
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="WLAN" ConversionType="Container" PropObjPath="WLAN" SocketIndex="1">
+              <WirelessModule.DataDef_String DisplayName="IP Address" ConversionType="NeedsQuotes" PropObjPath="WLAN.IP_Address" value="1.2.3.4" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array" />
+              <WirelessModule.DataDef_Enum DisplayName="color" ConversionType="AsIs" PropObjPath="WLAN.color" value="4">
+                <ExtraInfo>
+                  <Enumerations>
+                    <Enumeration value="0" name="black" />
+                    <Enumeration value="1" name="white" />
+                    <Enumeration value="2" name="red" />
+                    <Enumeration value="3" name="blue" />
+                    <Enumeration value="4" name="yellow" />
+                    <Enumeration value="5" name="orange" />
+                    <Enumeration value="6" name="purple" />
+                  </Enumerations>
+                </ExtraInfo>
+              </WirelessModule.DataDef_Enum>
+              <WirelessModule.DataDef_Numeric DisplayName="Numeric" ConversionType="AsIs" PropObjPath="WLAN.Numeric" value="0" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array 2" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array_2">
+                <value>1.1</value>
+                <value>2</value>
+              </WirelessModule.DataDef_NumericArray>
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="WLAN" ConversionType="Container" PropObjPath="WLAN" SocketIndex="2">
+              <WirelessModule.DataDef_String DisplayName="IP Address" ConversionType="NeedsQuotes" PropObjPath="WLAN.IP_Address" value="1.2.3.4" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array" />
+              <WirelessModule.DataDef_Enum DisplayName="color" ConversionType="AsIs" PropObjPath="WLAN.color" value="4">
+                <ExtraInfo>
+                  <Enumerations>
+                    <Enumeration value="0" name="black" />
+                    <Enumeration value="1" name="white" />
+                    <Enumeration value="2" name="red" />
+                    <Enumeration value="3" name="blue" />
+                    <Enumeration value="4" name="yellow" />
+                    <Enumeration value="5" name="orange" />
+                    <Enumeration value="6" name="purple" />
+                  </Enumerations>
+                </ExtraInfo>
+              </WirelessModule.DataDef_Enum>
+              <WirelessModule.DataDef_Numeric DisplayName="Numeric" ConversionType="AsIs" PropObjPath="WLAN.Numeric" value="0" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array 2" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array_2">
+                <value>1.1</value>
+                <value>2</value>
+              </WirelessModule.DataDef_NumericArray>
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="WLAN" ConversionType="Container" PropObjPath="WLAN" SocketIndex="3">
+              <WirelessModule.DataDef_String DisplayName="IP Address" ConversionType="NeedsQuotes" PropObjPath="WLAN.IP_Address" value="1.2.3.4" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array" />
+              <WirelessModule.DataDef_Enum DisplayName="color" ConversionType="AsIs" PropObjPath="WLAN.color" value="4">
+                <ExtraInfo>
+                  <Enumerations>
+                    <Enumeration value="0" name="black" />
+                    <Enumeration value="1" name="white" />
+                    <Enumeration value="2" name="red" />
+                    <Enumeration value="3" name="blue" />
+                    <Enumeration value="4" name="yellow" />
+                    <Enumeration value="5" name="orange" />
+                    <Enumeration value="6" name="purple" />
+                  </Enumerations>
+                </ExtraInfo>
+              </WirelessModule.DataDef_Enum>
+              <WirelessModule.DataDef_Numeric DisplayName="Numeric" ConversionType="AsIs" PropObjPath="WLAN.Numeric" value="0" />
+              <WirelessModule.DataDef_NumericArray DisplayName="Number array 2" ConversionType="ArrayOfDoubles" PropObjPath="WLAN.Number_array_2">
+                <value>1.1</value>
+                <value>2</value>
+              </WirelessModule.DataDef_NumericArray>
+            </InterfaceSocket>
+          </Interfaces>
+        </Technology>
+        <Technology name="Bluetooth">
+          <Interfaces>
+            <InterfaceSocket DisplayName="Bluetooth" ConversionType="Container" PropObjPath="Bluetooth" SocketIndex="0">
+              <WirelessModule.DataDef_String DisplayName="COM Port" ConversionType="NeedsQuotes" PropObjPath="Bluetooth.COM_Port" value="" />
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="Bluetooth" ConversionType="Container" PropObjPath="Bluetooth" SocketIndex="1">
+              <WirelessModule.DataDef_String DisplayName="COM Port" ConversionType="NeedsQuotes" PropObjPath="Bluetooth.COM_Port" value="" />
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="Bluetooth" ConversionType="Container" PropObjPath="Bluetooth" SocketIndex="2">
+              <WirelessModule.DataDef_String DisplayName="COM Port" ConversionType="NeedsQuotes" PropObjPath="Bluetooth.COM_Port" value="" />
+            </InterfaceSocket>
+            <InterfaceSocket DisplayName="Bluetooth" ConversionType="Container" PropObjPath="Bluetooth" SocketIndex="3">
+              <WirelessModule.DataDef_String DisplayName="COM Port" ConversionType="NeedsQuotes" PropObjPath="Bluetooth.COM_Port" value="" />
+            </InterfaceSocket>
+          </Interfaces>
+        </Technology>
+      </Technologies>
+      <DutAntennas>
+        <DutAntenna antennaIndex="0">
+          <AntennaAlias>DummyAnt0</AntennaAlias>
+          <AntennaTechnology name="Dummy" />
+		  <AntennaTechnology name="Garbage" />
+          <InstrumentConnectionsSocket number="0">
+            <InstrumentConnections>
+              <TxConnection instrName="SA0" instrPort="SA0" />
+              <RxConnection instrName="SG0" instrPort="SG0" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="1">
+            <InstrumentConnections>
+              <TxConnection instrName="SA1" instrPort="SA1" />
+              <RxConnection instrName="SG1" instrPort="SG1" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="2">
+            <InstrumentConnections>
+              <TxConnection instrName="SA2" instrPort="SA2" />
+              <RxConnection instrName="SG2" instrPort="SG2" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="3">
+            <InstrumentConnections>
+              <TxConnection instrName="SA3" instrPort="SA3" />
+              <RxConnection instrName="SG3" instrPort="SG3" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+        </DutAntenna>
+        <DutAntenna antennaIndex="1">
+          <AntennaAlias>DummyAnt1</AntennaAlias>
+          <AntennaTechnology name="Dummy" />
+          <InstrumentConnectionsSocket number="0">
+            <InstrumentConnections>
+              <TxConnection instrName="SA0" instrPort="SA0" />
+              <RxConnection instrName="SG0" instrPort="SG0" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="1">
+            <InstrumentConnections>
+              <TxConnection instrName="SA1" instrPort="SA1" />
+              <RxConnection instrName="SG1" instrPort="SG1" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="2">
+            <InstrumentConnections>
+              <TxConnection instrName="SA2" instrPort="SA2" />
+              <RxConnection instrName="SG2" instrPort="SG2" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="3">
+            <InstrumentConnections>
+              <TxConnection instrName="SA3" instrPort="SA3" />
+              <RxConnection instrName="SG3" instrPort="SG3" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+        </DutAntenna>
+        <DutAntenna antennaIndex="2">
+          <AntennaAlias>DummyAnt2</AntennaAlias>
+          <AntennaTechnology name="Dummy" />
+          <InstrumentConnectionsSocket number="0">
+            <InstrumentConnections>
+              <TxConnection instrName="SA0" instrPort="SA0" />
+              <RxConnection instrName="SG0" instrPort="SG0" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="1">
+            <InstrumentConnections>
+              <TxConnection instrName="SA1" instrPort="SA1" />
+              <RxConnection instrName="SG1" instrPort="SG1" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="2">
+            <InstrumentConnections>
+              <TxConnection instrName="SA2" instrPort="SA2" />
+              <RxConnection instrName="SG2" instrPort="SG2" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+          <InstrumentConnectionsSocket number="3">
+            <InstrumentConnections>
+              <TxConnection instrName="SA3" instrPort="SA3" />
+              <RxConnection instrName="SG3" instrPort="SG3" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+        </DutAntenna>
+      </DutAntennas>
+      <DutSoftwareInterface>
+        <Initialize URL="./Dummy DUT Initialize.vi" type="VI" name="Dummy DUT Initialize" />
+      </DutSoftwareInterface>
+    </DutManifest>
+	
+  </Duts>
+</SystemConfiguration>

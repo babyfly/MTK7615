@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestStepManifest>
+  <TestStepHeader>
+    <Name>BT Tx LE Test</Name>
+    <Version>1.0</Version>
+    <GUID>0685E960-1CF5-4B99-9967-C9CB90F6FCEF</GUID>
+    <Technology>Bluetooth</Technology>
+    <SupportedDuts>BTDUT</SupportedDuts>
+    <Documentation></Documentation>
+  </TestStepHeader>
+  <TestStepSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niDTS BT LE Tx Test Initialize.vi" />
+    <Configure type="VI" URL="..\Exports\niDTS BT LE Tx Test Configure.vi" />
+    <Initiate type="VI" URL="..\Exports\niDTS BT LE Tx Test Initiate.vi" />
+    <FetchResults type="VI" URL="..\Exports\niDTS BT LE Tx Test Fetch Results.vi" />
+    <Close type="VI" URL="..\Exports\niDTS BT LE Tx Test Close.vi" />
+    <SetParameters type="VI" URL="..\Exports\niDTS BT LE Tx Test Set Parameters.vi" />
+    <GetDefaultParameters type="VI" URL="..\Exports\niDTS BT LE Tx Test Get Default Parameters.vi" />
+    <GetDefaultLimits type="VI" URL="..\Exports\niDTS BT LE Tx Test Get Default Limits.vi" />
+  </TestStepSoftwareInterface>
+</TestStepManifest>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TechnologyManifest>
+  <TechnologyHeader>
+    <Name>Utilities</Name>
+    <Version>1.0</Version>
+    <GUID>6C8D4940-3318-45F1-BFC1-00E305BEE2FA</GUID>
+    <Vendor>NI</Vendor>
+    <Documentation>Utilities, generated March 16th, 2016</Documentation>
+  </TechnologyHeader>
+  <Standards>
+    <Standard name="" />
+  </Standards>
+  <Drivers>
+    <SignalGenerator path="niRfGeneralSettings\Objects\niRfGeneralSettings.lvclass" />
+    <SignalAnalyzer path="niRfGeneralSettings\Objects\niRfGeneralSettings.lvclass" />
+  </Drivers>
+</TechnologyManifest>

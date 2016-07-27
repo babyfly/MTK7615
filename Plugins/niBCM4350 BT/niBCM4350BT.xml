@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DutManifest>
+  <DutPlugin>
+    <Name>niBCM4350 BT</Name>
+    <Version>1.0</Version>
+    <GUID>26B3A0ED-D1FC-49CB-AFC9-CEFA85647051</GUID>
+    <ChipsetVendor>BCM</ChipsetVendor>
+    <ChipsetModel>4350</ChipsetModel>
+    <OEM></OEM>
+    <OEMModel></OEMModel>
+    <Documentation></Documentation>
+  </DutPlugin>
+  <Technologies>
+    <Technology name="Bluetooth">
+      <Interfaces />
+    </Technology>
+  </Technologies>
+  <DutAntennas>
+    <DutAntenna>
+      <AntennaTechnology>Bluetooth</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="SA0" instrPort="Port1" />
+        <RxConnection instrName="SG0" instrPort="Port1" />
+      </InstrumentConnections>
+    </DutAntenna>
+  </DutAntennas>
+  <DutSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niBCM4350 BT Initialize Serial.vi" />
+  </DutSoftwareInterface>
+</DutManifest>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestStepManifest>
+  <TestStepHeader>
+    <Name>802.11ac VHT Tx Test</Name>
+    <Version>0.2</Version>
+    <GUID>5D842B39-0940-42DD-9064-DD48D8FEDF8F</GUID>
+    <Technology>WLAN</Technology>
+	<Documentation></Documentation>
+  </TestStepHeader>
+  <TestStepSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niDTS WLAN VHT Tx Test Initialize.vi" />
+    <Configure type="VI" URL="..\Exports\niDTS WLAN VHT Tx Test Configure.vi" />
+    <Initiate type="VI" URL="..\Exports\niDTS WLAN VHT Tx Test Initiate.vi" />
+    <FetchResults type="VI" URL="..\Exports\niDTS WLAN VHT Tx Test Fetch Results.vi" />
+    <Close type="VI" URL="..\Exports\niDTS WLAN VHT Tx Test Close.vi" />
+    <SetParameters type="VI" URL="..\Exports\niDTS WLAN VHT Tx Test Set Parameters.vi" />
+    <GetDefaultParameters type="VI" URL="..\Exports\niDTS WLAN VHT Tx Test Get Default Parameters.vi" />
+    <GetDefaultLimits type="VI" URL="..\Exports\niDTS WLAN VHT Tx Test Get Default Limits.vi" />
+  </TestStepSoftwareInterface>
+</TestStepManifest>

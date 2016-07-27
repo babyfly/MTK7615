@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DutManifest>
+  <DutPlugin>
+    <Name>BluetoothLE DTM</Name>
+    <Version>1.0.1</Version>
+    <GUID>445B85B4-AEA8-4122-9430-F33240942B0C</GUID>
+    <ChipsetVendor></ChipsetVendor>
+    <ChipsetModel></ChipsetModel>
+    <OEM></OEM>
+    <OEMModel></OEMModel>
+    <Documentation></Documentation>
+  </DutPlugin>
+  <Technologies>
+    <Technology name="Bluetooth">
+	  <Standards>
+        <Standard name="LE"/>
+      </Standards>
+      <Interfaces />
+    </Technology>
+  </Technologies>
+  <DutAntennas>
+    <DutAntenna Disabled="0">
+      <AntennaAlias />
+      <AntennaTechnology>Bluetooth</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="" instrPort="" />
+        <RxConnection instrName="" instrPort="" />
+      </InstrumentConnections>
+    </DutAntenna>
+  </DutAntennas>
+  <DutSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niLEDTM BT Initialize Serial.vi" />
+  </DutSoftwareInterface>
+</DutManifest>

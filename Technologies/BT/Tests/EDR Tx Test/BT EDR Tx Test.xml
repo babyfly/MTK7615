@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestStepManifest>
+  <TestStepHeader>
+    <Name>BT Tx EDR Test</Name>
+    <Version>1.0</Version>
+    <GUID>206935B4-0477-491D-BFAA-78253AA17824</GUID>
+    <Technology>Bluetooth</Technology>
+    <SupportedDuts>DTDUT</SupportedDuts>
+    <Documentation></Documentation>
+  </TestStepHeader>
+  <TestStepSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niDTS BT EDR Tx Test  Initialize.vi" />
+    <Configure type="VI" URL="..\Exports\niDTS BT EDR Tx Test Configure.vi" />
+    <Initiate type="VI" URL="..\Exports\niDTS BT EDR Tx Test Initiate.vi" />
+    <FetchResults type="VI" URL="..\Exports\niDTS BT EDR Tx Test Fetch Results.vi" />
+    <Close type="VI" URL="..\Exports\niDTS BT EDR Tx Test Close.vi" />
+    <SetParameters type="VI" URL="..\Exports\niDTS BT EDR Tx Test Set Parameters.vi" />
+    <GetDefaultParameters type="VI" URL="..\Exports\niDTS BT EDR Tx Test Get Default Parameters.vi" />
+    <GetDefaultLimits type="VI" URL="..\Exports\niDTS BT EDR Tx Test Get Default Limits.vi" />
+  </TestStepSoftwareInterface>
+</TestStepManifest>

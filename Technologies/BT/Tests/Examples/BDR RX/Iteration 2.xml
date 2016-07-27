@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Mercury Station Definition.xsd">
+  <Instruments>
+    <SignalAnalyzers>
+      <SignalAnalyzer interface="VISA" name="SA0" resource="mercury-mct"/>
+    </SignalAnalyzers>
+    <SignalGenerators>
+      <SignalGenerator interface="VISA" name="SG0" resource="mercury-mct"/>
+    </SignalGenerators>
+  </Instruments>
+  <Duts>
+    <Dut device="Qualcomm">
+    	<Socket number="0">
+    		<Interfaces>
+    			<Interface Resource="COM1" Type="Serial"/>
+   			</Interfaces>
+        <DutAntennas>
+          <!-- The DutAntenna name tag is optional. It's available for a user to have a descriptor in the XML so they know which physical antenna this is. -->
+          <DutAntenna name="Connectivity0">
+            <DutTechnologies>
+              <DutTechnology name="WLAN" antennaIndex="0"/>
+            </DutTechnologies>
+            <InstrumentConnections>
+              <TxConnection instrName="SA0" instrPort="'Port1'"/>
+              <RxConnection instrName="SG0" instrPort="'Port1'"/>
+            </InstrumentConnections>
+   			  </DutAntenna>
+        </DutAntennas>
+    	</Socket>
+    	</Dut>
+  </Duts>
+</StationDefinition>

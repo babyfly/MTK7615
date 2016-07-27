@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DutManifest>
+  <DutPlugin>
+    <Name>niBCM4350</Name>
+    <Version>0.2</Version>
+    <GUID>D35B5A29-D1B1-4E36-9583-A408273F2467</GUID>
+    <ChipsetVendor>Broadcom</ChipsetVendor>
+    <ChipsetModel>4350</ChipsetModel>
+	<Documentation></Documentation>
+  </DutPlugin>
+  <Technologies>
+    <Technology name="WLAN">
+      <Standards>
+        <Standard name="DSSS" />
+        <Standard name="OFDM" />
+        <Standard name="HT" />
+        <Standard name="VHT" />
+      </Standards>
+      <Interfaces />
+    </Technology>
+  </Technologies>
+  <DutAntennas>
+    <DutAntenna>
+      <AntennaAlias>Default</AntennaAlias>
+      <AntennaAlias>WLAN0</AntennaAlias>
+      <AntennaTechnology>WLAN</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="SA0" instrPort="Port1" />
+        <RxConnection instrName="SG0" instrPort="Port1" />
+      </InstrumentConnections>
+    </DutAntenna>
+    <DutAntenna>
+      <AntennaAlias>WLAN1</AntennaAlias>
+      <AntennaTechnology>WLAN</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="SA0" instrPort="Port1" />
+        <RxConnection instrName="SG0" instrPort="Port1" />
+      </InstrumentConnections>
+    </DutAntenna>
+  </DutAntennas>
+  <DutSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niBCM4350 Initialize EXE IPSocket.vi" />
+  </DutSoftwareInterface>
+</DutManifest>

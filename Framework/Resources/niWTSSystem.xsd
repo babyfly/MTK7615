@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.ni.com/WTS" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.ni.com/WTS">
+
+    <complexType name="SignalAnalyzer">
+    	<attribute name="interface" type="string" default="VISA"></attribute>
+    	<attribute name="name" type="string" default="SA0"></attribute>
+    	<attribute name="resource" type="string" default="niMCT"></attribute>
+    </complexType>
+
+    <complexType name="SignalGenerator">
+    	<attribute name="interface" type="string" default="VISA"></attribute>
+    	<attribute name="name" type="string" default="SG0"></attribute>
+    	<attribute name="resource" type="string" default="niMCT"></attribute>
+    </complexType>
+
+    <complexType name="SignalAnalyzers">
+    	<sequence>
+    		<element name="SignalAnalyzer" type="xs:SignalAnalyzer" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="SignalGenerators">
+    	<sequence>
+    		<element name="SignalGenerator" type="xs:SignalGenerator"></element>
+    	</sequence>
+    </complexType>
+
+
+    <complexType name="Instruments">
+    	<sequence>
+    		<element name="SignalAnalyzers" type="xs:SignalAnalyzers"
+    			maxOccurs="1" minOccurs="0">
+    		</element>
+    		<element name="SignalGenerators" type="xs:SignalGenerators" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+
+    <complexType name="Interface">
+    	<attribute name="Resource" type="string"></attribute>
+    	<attribute name="Type" type="string"></attribute>
+    </complexType>
+
+    <complexType name="Interfaces">
+    	<sequence maxOccurs="unbounded" minOccurs="0">
+    		<any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="lax"></any>
+    	</sequence>
+    </complexType>
+    
+
+    <complexType name="DutAntenna">
+    	<sequence>
+    		<element name="AntennaAlias" type="xs:AnteannaAlias"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="AntennaTechnology"
+    			type="xs:AntennaTechnology" maxOccurs="unbounded"
+    			minOccurs="1">
+    		</element>
+    		<choice>
+    			<element name="InstrumentConnections"
+    				type="xs:InstrumentConnections" maxOccurs="1" minOccurs="1">
+    			</element>
+    			<element name="InstrumentConnectionsSocket" type="xs:InstrumentConnectionsSocket" maxOccurs="unbounded" minOccurs="1"></element>
+    		</choice>
+    	</sequence>
+    	<attribute name="antennaIndex" type="string" default="0"></attribute>
+    </complexType>
+
+    <complexType name="DutTechnology">
+    	<attribute name="name" type="string" default="WLAN">
+    	</attribute>
+    	<attribute name="antennaIndex" type="string" default="0"></attribute>
+    </complexType>
+
+    <complexType name="DutTechnologies">
+    	<sequence>
+    		<element name="DutTechnology" type="xs:DutTechnology" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="TxConnection">
+    	<attribute name="instrName" type="string" default="SA0">
+    	</attribute>
+    	<attribute name="instrPort" type="string" default="Port1"></attribute>
+    </complexType>
+
+    <complexType name="RxConnection">
+    	<attribute name="instrName" type="string" default="SG0">
+    	</attribute>
+    	<attribute name="instrPort" type="string" default="Port1"></attribute>
+    </complexType>
+
+    <complexType name="InstrumentConnections">
+    	<sequence>
+    		<element name="TxConnection" type="xs:TxConnection"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="RxConnection" type="xs:RxConnection" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="DutAntennas">
+    	<sequence>
+    		<element name="DutAntenna" type="xs:DutAntenna" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+
+    <complexType name="Duts">
+    	<sequence>
+    		<element name="DutManifest" type="xs:DutManifest" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+
+    <element name="SystemConfiguration" type="xs:SystemConfiguration"></element>
+
+    <complexType name="SystemConfiguration">
+    	<sequence>
+    		<element name="HardwareManifest" type="xs:HardwareManifest"
+    			maxOccurs="1" minOccurs="0">
+    		</element>
+    		<element name="Duts" type="xs:Duts" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+
+    <simpleType name="RFTestMask">
+    	<restriction base="string"></restriction>
+    </simpleType>
+
+    <complexType name="Standard">
+    	<sequence>
+    		<choice>
+    			<element name="RFTestMask" type="xs:RFTestMask"
+    				maxOccurs="unbounded" minOccurs="0">
+    			</element>
+    			<element name="RFTestType" type="xs:RFTestType" maxOccurs="unbounded" minOccurs="0"></element>
+    		</choice>
+    	</sequence>
+    	<attribute name="name" type="string"></attribute>
+    </complexType>
+
+    <complexType name="Standards">
+    	<sequence>
+    		<element name="Standard" type="xs:Standard" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Technology">
+    	<sequence>
+    		<choice>
+    			<element name="Standards" type="xs:Standards"
+    				maxOccurs="1" minOccurs="0">
+    			</element>
+    			<element name="RFTestMask" type="xs:RFTestMask" maxOccurs="unbounded" minOccurs="0"></element>
+    			<element name="RFTestType" type="xs:RFTestType" maxOccurs="unbounded" minOccurs="0"></element>
+    		</choice>
+    		<element name="Interfaces" type="xs:Interfaces"></element>
+    	</sequence>
+    	<attribute name="name" type="xs:technologyList"></attribute>
+    </complexType>
+
+    <complexType name="AntennaTechnology">
+    	<attribute name="name" type="xs:technologyList"
+    		default="WLAN">
+    	</attribute>
+    	<attribute name="technologyIndex" type="string" default="0"></attribute>
+    </complexType>
+
+    <simpleType name="AnteannaAlias">
+    	<restriction base="string"></restriction>
+    </simpleType>
+
+    <simpleType name="technologyList">
+    	<restriction base="string">
+    		<enumeration value="WLAN"></enumeration>
+    		<enumeration value="Bluetooth"></enumeration>
+    		<enumeration value="GPS"></enumeration>
+    		<enumeration value="GLONASS"></enumeration>
+    		<enumeration value="GALILEO"></enumeration>
+    	</restriction>
+    </simpleType>
+
+    <complexType name="DutManifest">
+    	<sequence>
+    		<element name="DutPlugin" type="xs:DutHeader" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+            <element name="Technologies" type="xs:Technologies"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="DutAntennas" type="xs:DutAntennas"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+            <element name="DutSoftwareInterface" type="xs:DutSoftwareInterface" maxOccurs="1" minOccurs="1"></element>
+        </sequence>
+
+    </complexType>
+
+    <complexType name="Technologies">
+    	<sequence>
+    		<element name="Technology" type="xs:Technology" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="DutManifest" type="xs:DutManifest"></element>
+
+    <complexType name="Connection">
+    	<attribute name="alias" type="string" default="ALIAS"></attribute>
+    	<attribute name="type" type="string" default="TYPE"></attribute>
+    	<attribute name="resource" type="string" default="RESOURCE"></attribute>
+    	<attribute name="interface" type="string" default="VISA"></attribute>
+    </complexType>
+
+    <complexType name="Connections">
+    	<sequence>
+    		<element name="Connection" type="xs:Connection" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Port">
+    	<attribute name="name" type="string" default="NAME" use="optional"></attribute>
+    	<attribute name="alias" type="string" default="ALIAS" use="optional"></attribute>
+    	<attribute name="direction" type="xs:directionList" default="Bidirectional"></attribute>
+    </complexType>
+
+  <simpleType name="directionList">
+    <restriction base="string">
+      <enumeration value="Input"></enumeration>
+      <enumeration value="Output"></enumeration>
+      <enumeration value="Bidirectional"></enumeration>
+    </restriction>
+  </simpleType>
+    
+    <complexType name="Ports">
+    	<sequence>
+    		<element name="Port" type="xs:Port" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Hardware">
+    	<sequence>
+    		<element name="Connections" type="xs:Connections"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="Ports" type="xs:Ports" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="HardwareManifest" type="xs:HardwareManifest"></element>
+
+
+    <complexType name="HardwareManifest">
+    	<sequence>
+    		<element name="Hardware" type="xs:Hardware" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="InterfaceSocket">
+    	<sequence>
+    		<element name="Interface" type="xs:Interface" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    	<attribute name="number" type="string" default="0"
+    		use="optional">
+    	</attribute>
+    </complexType>
+
+    <complexType name="InstrumentConnectionsSocket">
+    	<sequence>
+    		<element name="InstrumentConnections" type="xs:InstrumentConnections"></element>
+    	</sequence>
+    	<attribute name="number" type="string"
+    		use="optional" default="0">
+    	</attribute>
+    </complexType>
+
+    <complexType name="DutHeader">
+    	<sequence>
+    		<element name="Name" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Version" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="GUID" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="ChipsetVendor" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="ChipsetModel" type="string"
+    			maxOccurs="unbounded" minOccurs="1">
+    		</element>
+    		<element name="OEM" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="OEMModel" type="string" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="exportType">
+    	<attribute name="type" type="string" use="required"></attribute>
+    	<attribute name="URL" type="string" use="required"></attribute>
+    	<attribute name="name" type="string" use="optional"></attribute>
+    </complexType>
+
+    <complexType name="exportInitialize">
+    	<complexContent>
+    		<extension base="xs:exportType"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="DutSoftwareInterface">
+    	<sequence>
+    		<element name="Initialize" type="xs:exportInitialize" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="exportConfigure">
+    	<complexContent>
+    		<extension base="xs:exportType"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="exportInitiate">
+    	<complexContent>
+    		<extension base="xs:exportType"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="exportFetchResults">
+    	<complexContent>
+    		<extension base="xs:exportType"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="exportClose">
+    	<complexContent>
+    		<extension base="xs:exportType"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="exportSetParameters">
+    	<complexContent>
+    		<extension base="xs:exportType"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="exportGetDefaultParameters">
+    	<complexContent>
+    		<extension base="xs:exportType"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="exportGetDefaultLimits">
+    	<complexContent>
+    		<extension base="xs:exportType"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="exportGetDocumentation">
+    	<complexContent>
+    		<extension base="xs:exportType"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="TestStepHeader">
+    	<sequence>
+    		<element name="Name" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Version" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="GUID" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Technology" type="xs:TestStepTechnology"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="SupportedDuts" type="xs:TestStepSupportedDuts"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="TestStepSoftwareInterface">
+    	<sequence>
+    		<element name="Initialize" type="xs:exportInitialize" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Configure" type="xs:exportConfigure" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Initiate" type="xs:exportInitiate" maxOccurs="1" minOccurs="1"></element>
+    		<element name="FetchResults" type="xs:exportFetchResults" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Close" type="xs:exportClose" maxOccurs="1" minOccurs="1"></element>
+    		<element name="SetParameters" type="xs:exportSetParameters" maxOccurs="1" minOccurs="1"></element>
+    		<element name="GetDefaultParameters" type="xs:exportGetDefaultParameters" maxOccurs="1" minOccurs="1"></element>
+    		<element name="GetDefaultLimits" type="xs:exportGetDefaultLimits" maxOccurs="1" minOccurs="1"></element>
+    		<element name="GetDocumentation" type="xs:exportGetDocumentation" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="TestStepManifest">
+    	<sequence>
+    		<element name="TestStepHeader" type="xs:TestStepHeader"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="TestStepSoftwareInterface" type="xs:TestStepSoftwareInterface"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="TestStepManifest" type="xs:TestStepManifest"></element>
+
+    <simpleType name="RFTestType">
+    	<restriction base="string"></restriction>
+    </simpleType>
+
+    <complexType name="TestStepTechnology">
+    	<choice>
+    		<element name="Standards" type="xs:Standards" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="RFTestMask" type="xs:RFTestMask"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="RFTestType" type="xs:RFTestType" maxOccurs="1" minOccurs="0"></element>
+    	</choice>
+    	<attribute name="name" type="xs:technologyList"></attribute>
+    </complexType>
+
+    <complexType name="TestStepSupportedDuts">
+    	<sequence>
+    		<element name="SupportedDUT" type="string" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+</schema>

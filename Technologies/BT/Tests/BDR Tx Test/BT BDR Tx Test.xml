@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestStepManifest>
+  <TestStepHeader>
+    <Name>BT Tx BDR Test</Name>
+    <Version>1.0</Version>
+    <GUID>5E479F52-E9E9-4CA1-98F8-C05F46C028CD</GUID>
+    <Technology>Bluetooth</Technology>
+    <SupportedDuts>4350BT</SupportedDuts>
+    <Documentation></Documentation>
+  </TestStepHeader>
+  <TestStepSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niDTS BT BDR Tx Test  Initialize.vi" />
+    <Configure type="VI" URL="..\Exports\niDTS BT BDR Tx Test Configure.vi" />
+    <Initiate type="VI" URL="..\Exports\niDTS BT BDR Tx Test Initiate.vi" />
+    <FetchResults type="VI" URL="..\Exports\niDTS BT BDR Tx Test Fetch Results.vi" />
+    <Close type="VI" URL="..\Exports\niDTS BT BDR Tx Test Close.vi" />
+    <SetParameters type="VI" URL="..\Exports\niDTS BT BDR Tx Test Set Parameters.vi" />
+    <GetDefaultParameters type="VI" URL="..\Exports\niDTS BT BDR Tx Test Get Default Parameters.vi" />
+    <GetDefaultLimits type="VI" URL="..\Exports\niDTS BT BDR Tx Test Get Default Limits.vi" />
+  </TestStepSoftwareInterface>
+</TestStepManifest>

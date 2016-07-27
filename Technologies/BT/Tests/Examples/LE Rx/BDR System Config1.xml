@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemConfiguration>
+  <Duts>
+    <DutManifest>
+      <DutPlugin>
+        <Name>niBCM4350 BT</Name>
+        <Version>1.0</Version>
+        <GUID>26B3A0ED-D1FC-49CB-AFC9-CEFA85647051</GUID>
+        <ChipsetVendor>BCM</ChipsetVendor>
+        <ChipsetModel>4350</ChipsetModel>
+        <OEM></OEM>
+        <OEMModel></OEMModel>
+        <Documentation></Documentation>
+      </DutPlugin>
+      <Technologies>
+        <Technology name="Bluetooth">
+          <Interfaces>
+            <InterfaceSocket />
+          </Interfaces>
+        </Technology>
+      </Technologies>
+      <DutAntennas>
+        <DutAntenna>
+          <AntennaTechnology>Bluetooth</AntennaTechnology>
+          <InstrumentConnectionsSocket number="0">
+            <InstrumentConnections>
+              <TxConnection instrName="sa0" instrPort="rio0" />
+              <RxConnection instrName="sg0" instrPort="rio0" />
+            </InstrumentConnections>
+          </InstrumentConnectionsSocket>
+        </DutAntenna>
+      </DutAntennas>
+      <DutSoftwareInterface>
+        <Initialize type="VI" URL="Technologies\BT\Dut\Exports\niDTS BT Dut Initialize.vi" />
+      </DutSoftwareInterface>
+    </DutManifest>
+  </Duts>
+  <Documentation></Documentation>
+  <HardwareManifestPath>Technologies\BT\Tests\BDR Tx Test\Example\BDR HW Manifest.xml</HardwareManifestPath>
+</SystemConfiguration>

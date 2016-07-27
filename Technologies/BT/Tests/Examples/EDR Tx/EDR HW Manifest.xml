@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HardwareManifest>
+  <Documentation>Basic Config</Documentation>
+  <Hardware>
+    <Connections>
+      <Connection alias="sa0" resource="rivi-inst" type="Analyzer" interface="VISA" />
+      <Connection alias="sg0" resource="rivi-inst" type="Generator" interface="VISA" />
+    </Connections>
+    <Ports>
+      <Port alias="RIO0" name="sa0" direction="Input" />
+      <Port alias="RIO0" name="sg0" direction="Output" />
+    </Ports>
+  </Hardware>
+</HardwareManifest>

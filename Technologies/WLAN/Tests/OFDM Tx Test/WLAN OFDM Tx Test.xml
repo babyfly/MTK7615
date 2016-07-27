@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestStepManifest>
+  <TestStepHeader>
+    <Name>802.11a/g OFDM Tx Test</Name>
+    <Version>0.2</Version>
+    <GUID>9C053975-9948-4AE9-BDD6-8E5A7B365834</GUID>
+    <Technology>WLAN</Technology>
+	<Documentation></Documentation>
+  </TestStepHeader>
+  <TestStepSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niDTS WLAN OFDM Tx Test Initialize.vi" />
+    <Configure type="VI" URL="..\Exports\niDTS WLAN OFDM Tx Test Configure.vi" />
+    <Initiate type="VI" URL="..\Exports\niDTS WLAN OFDM Tx Test Initiate.vi" />
+    <FetchResults type="VI" URL="..\Exports\niDTS WLAN OFDM Tx Test Fetch Results.vi" />
+    <Close type="VI" URL="..\Exports\niDTS WLAN OFDM Tx Test Close.vi" />
+    <SetParameters type="VI" URL="..\Exports\niDTS WLAN OFDM Tx Test Set Parameters.vi" />
+    <GetDefaultParameters type="VI" URL="..\Exports\niDTS WLAN OFDM Tx Test Get Default Parameters.vi" />
+    <GetDefaultLimits type="VI" URL="..\Exports\niDTS WLAN OFDM Tx Test Get Default Limits.vi" />
+  </TestStepSoftwareInterface>
+</TestStepManifest>

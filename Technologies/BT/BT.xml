@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TechnologyManifest>
+  <TechnologyHeader>
+    <Name>Bluetooth</Name>
+    <Version>1.0</Version>
+    <GUID>BC2AE018-A813-4BFE-8970-CFC6FD99915A</GUID>
+    <Vendor>NI</Vendor>
+    <Documentation>Bluetooth, generated Feb 16th, 2016</Documentation>
+  </TechnologyHeader>
+      <Standards>
+        <Standard name="EDR" />
+        <Standard name="BDR" />
+        <Standard name="LE" />
+      </Standards>
+</TechnologyManifest>

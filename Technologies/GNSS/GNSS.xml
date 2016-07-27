@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TechnologyManifest>
+  <TechnologyHeader>
+    <Name>GNSS</Name>
+    <Version>1.0</Version>
+    <GUID>7E0628A5-645D-4CE1-85B1-9F65E155BDFE</GUID>
+    <Vendor>NI</Vendor>
+    <Documentation>GNSS, generated Feb 16th, 2016</Documentation>
+  </TechnologyHeader>
+      <Standards>
+        <Standard name="GPS" />
+        <Standard name="GLONASS" />
+        <Standard name="Galileo" />
+        <Standard name="Beidou" />
+      </Standards>
+</TechnologyManifest>

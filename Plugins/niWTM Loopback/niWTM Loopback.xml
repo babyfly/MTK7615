@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DutManifest>
+  <DutPlugin>
+    <Name>niWTM Loopback</Name>
+    <Version>1.1.0</Version>
+    <GUID>E5C292F6-8787-4571-B55F-6AFFA636DBBF</GUID>
+    <ChipsetVendor>NI</ChipsetVendor>
+    <ChipsetModel>NI</ChipsetModel>
+    <Documentation></Documentation>
+  </DutPlugin>
+  <Technologies>
+    <Technology name="WLAN">
+      <Standards>
+        <Standard name="DSSS" />
+        <Standard name="OFDM" />
+        <Standard name="HT" />
+        <Standard name="VHT" />
+      </Standards>
+      <Interfaces />
+    </Technology>
+    <Technology name="Bluetooth">
+      <Standards>
+        <Standard name="EDR" />
+        <Standard name="BDR" />
+        <Standard name="LE" />
+      </Standards>
+      <Interfaces />
+    </Technology>
+    <Technology name="GNSS">
+      <Interfaces />
+      <Standards>
+        <Standard name="GPS" />
+        <Standard name="GLONASS" />
+        <Standard name="Galileo" />
+        <Standard name="Beidou" />
+      </Standards>
+    </Technology>
+  </Technologies>
+  <DutAntennas>
+    <DutAntenna Disabled="0">
+      <AntennaTechnology>WLAN</AntennaTechnology>
+      <AntennaTechnology>Bluetooth</AntennaTechnology>
+      <AntennaTechnology>GNSS</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="" instrPort="" />
+        <RxConnection instrName="" instrPort="" />
+      </InstrumentConnections>
+    </DutAntenna>
+    <DutAntenna Disabled="0">
+      <AntennaTechnology>WLAN</AntennaTechnology>
+      <AntennaTechnology>Bluetooth</AntennaTechnology>
+      <AntennaTechnology>GNSS</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="" instrPort="" />
+        <RxConnection instrName="" instrPort="" />
+      </InstrumentConnections>
+    </DutAntenna>
+    <DutAntenna Disabled="0">
+      <AntennaTechnology>WLAN</AntennaTechnology>
+      <AntennaTechnology>Bluetooth</AntennaTechnology>
+      <AntennaTechnology>GNSS</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="" instrPort="" />
+        <RxConnection instrName="" instrPort="" />
+      </InstrumentConnections>
+    </DutAntenna>
+    <DutAntenna Disabled="0">
+      <AntennaTechnology>WLAN</AntennaTechnology>
+      <AntennaTechnology>Bluetooth</AntennaTechnology>
+      <AntennaTechnology>GNSS</AntennaTechnology>
+      <InstrumentConnections>
+        <TxConnection instrName="" instrPort="" />
+        <RxConnection instrName="" instrPort="" />
+      </InstrumentConnections>
+    </DutAntenna>
+  </DutAntennas>
+  <DutSoftwareInterface>
+    <Initialize type="VI" URL="..\Exports\niWTM Loopback Initialize.vi" />
+  </DutSoftwareInterface>
+</DutManifest>
